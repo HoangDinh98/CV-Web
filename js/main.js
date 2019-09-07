@@ -17,7 +17,11 @@ $(document).ready(function () {
 	
 	$("#navbar a").click(function(event){
 		var section = $(this).data('nav-section');
-		mainContainer.toggleClass("open");
+		var currentViewWidth = window.innerWidth;
+		if (currentViewWidth < 992) {
+			mainContainer.toggleClass("open");
+		}
+
 		$('html, body').animate({
 			scrollTop: $('[data-section="' + section + '"]').offset().top - 30
 		}, 800);
