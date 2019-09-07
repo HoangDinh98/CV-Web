@@ -52,7 +52,8 @@ body {
 	flex-direction: column;
 	align-content: center;
 	align-items: center;
-	padding-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .sidebar .avatar-frame {
@@ -61,6 +62,7 @@ body {
 	border-radius: 50%;
 	overflow: hidden;
 	border: 2px solid #50FFF7;
+	margin-top: 20px;
 }
 
 .img-responsive {
@@ -73,14 +75,28 @@ body {
 	height: auto;
 }
 
+.sidebar .close-nav-btn {
+	padding: 0;
+	font-size: 2rem;
+	position: sticky;
+	top: 20px;
+	right: 15px;
+	height: 0;
+	margin-left: auto;
+	line-height: 0;
+	color: #fff;
+}
+
 .sidebar .my-name {
 	font-weight: bold;
+	margin-top: 1rem;
 }
 
 .navbar-list {
 	list-style: none;
 	padding: 0;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .navbar-item {
@@ -134,6 +150,24 @@ body {
 	z-index: 9999;
 }
 
+.navbar-control-area .collapse-btn {
+	visibility: visible;
+	opacity: 1;
+	padding: 0;
+	font-size: 1.5rem;
+	transition: visibility 0s, opacity 1s ease-out;
+}
+
+.navbar-control-area .collapse-btn:focus, .collapse-btn:active {
+	outline: none;
+	box-shadow: none;
+}
+
+.open .collapse-btn {
+	visibility: hidden;
+	opacity: 0;
+}
+
 
 .main {
 	display: flex;
@@ -171,16 +205,16 @@ body {
 	width: 0; 
 	height: 0; 
 	border-right: 40px solid transparent;
-    /*border-top: 120px solid #00d95d9e;*/
-    border-top: 120px solid #00fade9e;
+	/*border-top: 120px solid #00d95d9e;*/
+	border-top: 120px solid #00fade9e;
 }
 
 .decoration-header .triangle-2 {
 	width: 0; 
 	height: 0; 
 	border-right: 110px solid transparent;
-    /*border-top: 50px solid #00ffefb5;*/
-    border-top: 50px solid #00d4ffb5;
+	/*border-top: 50px solid #00ffefb5;*/
+	border-top: 50px solid #00d4ffb5;
 }
 
 .open .main {
@@ -209,6 +243,7 @@ body {
 .section-title-content {
 	margin-bottom: 1.2rem;
 	font-weight: bold;
+	color: #0060bc;
 }
 
 .section-content p {
@@ -225,6 +260,11 @@ body {
 .name-area {
 	text-align: center;
 	margin-top: 20px;
+}
+
+.name-area .own-name {
+	font-weight: bold;
+	color: #2c98f0;
 }
 
 .job-title {
@@ -595,7 +635,6 @@ p.flip:after {
 .interest-box {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-content: center;
 	align-items: center;
 }
@@ -652,21 +691,21 @@ p.flip:after {
 	width: 0; 
 	height: 0; 
 	border-left: 30px solid transparent;
-    border-bottom: 120px solid #00fade9e;
+	border-bottom: 120px solid #00fade9e;
 }
 
 .decoration-bottom .triangle-2 {
 	width: 0; 
 	height: 0; 
 	border-left: 60px solid transparent;
-    border-bottom: 70px solid #00ffa9b5;
+	border-bottom: 70px solid #00ffa9b5;
 }
 
 .decoration-bottom .triangle-3 {
 	width: 0; 
 	height: 0; 
 	border-left: 190px solid transparent;
-    border-bottom: 30px solid #00d4ffb5;
+	border-bottom: 30px solid #00d4ffb5;
 }
 
 @media (min-width: 576px) {}

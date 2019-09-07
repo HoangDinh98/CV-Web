@@ -1,8 +1,7 @@
-console.log("Hello World!");
-
 $(document).ready(function () {
 	var mainContainer = $("#main-container");
 	var trigger = $("#collapse-btn");
+	var closeNavBtn = $("#close-nav-btn");
 	var sidebar = $("#sidebar");
 	var isClosed = false;
 
@@ -10,10 +9,10 @@ $(document).ready(function () {
 		collapseNavbar();      
 	});
 
+	closeNavBtn.click( collapseNavbar );
 
 	function collapseNavbar() {
-		mainContainer.toggleClass("open");
-		console.log("work")
+		mainContainer.toggleClass("open");	
 	}
 	
 	$("#navbar a").click(function(event){
