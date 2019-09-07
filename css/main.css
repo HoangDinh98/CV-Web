@@ -509,6 +509,7 @@ p.flip:after {
 .technical-skills .skill-area {
 	margin: 1.5rem 0;
 	position: relative;
+	background: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
@@ -592,6 +593,7 @@ p.flip:after {
 .content-box {
 	margin: 1.5rem 0;
 	position: relative;
+	background: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
@@ -708,14 +710,52 @@ p.flip:after {
 	border-bottom: 30px solid #00d4ffb5;
 }
 
-@media (min-width: 576px) {}
-
-@media (min-width: 768px) {
-	.sidebar .avatar-frame {
-		width: 80%;
-	}
+.bg {
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
-@media (min-width: 992px) {}
+.bg-black {
+	position: fixed;
+	height: 100%;
+	z-index: -1;
+}
 
-@media (min-width: 1200px) {}
+.bg-white {
+	position: sticky;
+	height: 0;
+	z-index: -3;
+}
+
+.bg img {
+	width: 100%;
+	height: auto;
+	opacity: 0.15
+}
+
+.bg-white img {
+	opacity: 1;
+}
+
+.overlay-bg-box {
+	position: sticky;
+	top: 0;
+	z-index: -2;
+	height: 0;
+}
+
+.overlay-bg-box::after {
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(#00e6ad, #0024ff);
+    opacity: 0.5;
+}
+
+/*.overlay-bg {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(-90deg, red, yellow);
+}*/
