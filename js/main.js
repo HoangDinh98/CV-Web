@@ -27,22 +27,33 @@ $(document).ready(function () {
 		}, 800);
 	})
 
-	// function hamburger_cross() {
+	var navActive = function(section) {
+		console.log(section)
 
-	// 	if (isClosed == true) {          
-	// 		overlay.hide();
-	// 		trigger.removeClass('is-open');
-	// 		trigger.addClass('is-closed');
-	// 		isClosed = false;
-	// 	} else {   
-	// 		overlay.show();
-	// 		trigger.removeClass('is-closed');
-	// 		trigger.addClass('is-open');
-	// 		isClosed = true;
-	// 	}
-	// }
+		var $el = $('#navbar > ul');
+		$el.find('li').removeClass('active');
+		$el.each(function(){
+			$(this).find('a[data-nav-section="'+ section +'"]').closest('li').addClass('active');
+		});
 
-	// $('[data-toggle="offcanvas"]').click(function () {
-	// 	$('#wrapper').toggleClass('toggled');
-	// });  
+	};
+
+	var $section = $('section[data-section]');
+
+	$section.waypoint(function(direction) {
+
+		if (direction === 'down') {
+			navActive($(this.element).data('section'));
+		}
+	}, {
+		offset: '350px'
+	});
+
+	$section.waypoint(function(direction) {
+		if (direction === 'up') {
+			navActive($(this.element).data('section'));
+		}
+	}, {
+		offset: function() { return -$(this.element).height() + 155; }
+	});
 });
