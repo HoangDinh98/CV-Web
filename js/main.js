@@ -28,8 +28,6 @@ $(document).ready(function () {
 	})
 
 	var navActive = function(section) {
-		console.log(section)
-
 		var $el = $('#navbar > ul');
 		$el.find('li').removeClass('active');
 		$el.each(function(){
